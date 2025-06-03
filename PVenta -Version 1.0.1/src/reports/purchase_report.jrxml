@@ -1,0 +1,224 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="purchase_report" language="java" columnCount="1" pageWidth="220" pageHeight="842" columnWidth="180" leftMargin="20" rightMargin="20" topMargin="5" bottomMargin="5" uuid="05dcee01-0cce-40f7-a8d3-667e8809d228" ignorePagination="true">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<dataset name="dsPurchase_details" uuid="96e08793-948f-4a09-ae4b-0a72bc53347a">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<query language="sql"><![CDATA[]]></query>
+		<field name="product_name" class="java.lang.String"/>
+		<field name="purchase_price" class="java.lang.Double"/>
+		<field name="purchase_amount" class="java.lang.Integer"/>
+		<field name="purchase_subtotal" class="java.lang.Double"/>
+	</dataset>
+	<parameter name="ds" class="net.sf.jasperreports.engine.data.JRBeanArrayDataSource"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{id}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="created" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{created}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="purcharser" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{purcharser}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="total" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[$P{total}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="supplier" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{supplier}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="logoEmpresa" class="java.io.InputStream">
+		<defaultValueExpression><![CDATA[$P{logoEmpresa}]]></defaultValueExpression>
+	</parameter>
+	<query language="sql"><![CDATA["$0.00"]]></query>
+	<background splitType="Stretch"/>
+	<title height="176" splitType="Stretch">
+		<element kind="staticText" uuid="cffd902f-3ce9-4f9c-8bef-bcda6ed16a2f" x="0" y="96" width="37" height="11" fontSize="8.0" bold="true" hTextAlign="Left">
+			<text><![CDATA[Empresa:]]></text>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+		</element>
+		<element kind="staticText" uuid="ed3d687c-d01b-48a6-a5ca-8d5f150baf11" x="0" y="109" width="40" height="11" fontSize="8.0" bold="true" hTextAlign="Left" vTextAlign="Top">
+			<text><![CDATA[Dirección:]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+		</element>
+		<element kind="staticText" uuid="00ab1ab0-b15a-4125-8b29-cd505f30a53e" x="0" y="122" width="74" height="11" fontSize="8.0" bold="true" hTextAlign="Left" vTextAlign="Top">
+			<text><![CDATA[Correo electronico:]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+		</element>
+		<element kind="staticText" uuid="1e73f011-61b3-4721-9bdc-dada02f5d2fe" x="0" y="135" width="36" height="11" fontSize="8.0" bold="true" hTextAlign="Left" vTextAlign="Top">
+			<text><![CDATA[Teléfono:]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+		</element>
+		<element kind="staticText" uuid="4a1bb406-f366-4d7a-bc97-36ecb5221352" x="0" y="148" width="68" height="21" fontSize="8.0" bold="true" vTextAlign="Top">
+			<text><![CDATA[Fecha y Hora de
+impresión:]]></text>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="textField" uuid="16b66147-f725-4b5b-85d0-35d57a03d596" x="42" y="158" width="112" height="11" fontSize="8.0" pattern="MMMMM dd, yyyy">
+			<expression><![CDATA[new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new java.util.Date())]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+		</element>
+		<element kind="staticText" uuid="0d79cb53-29d5-4e85-8109-f0ddaa996254" x="141" y="7" width="39" height="8" fontSize="6.0" bold="true">
+			<text><![CDATA[N.º FACTURA]]></text>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+		</element>
+		<element kind="staticText" uuid="593a731e-5860-4287-9a86-2ad21505e49d" x="38" y="96" width="93" height="11" fontSize="8.0">
+			<text><![CDATA[Dalvasand Beauty Supply]]></text>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="textField" uuid="24af998b-5226-48b4-bbec-172677ff5492" x="147" y="15" width="26" height="8" fontSize="6.0" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$P{id}]]></expression>
+			<patternExpression><![CDATA[$P{id}]]></patternExpression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="image" uuid="fa9e93ab-3756-4be3-9ccb-914d53c41710" x="36" y="20" width="118" height="60" onErrorType="Blank">
+			<expression><![CDATA[$P{logoEmpresa}]]></expression>
+		</element>
+	</title>
+	<pageHeader height="22" splitType="Stretch">
+		<element kind="staticText" uuid="bb4f81e4-5793-4bab-a308-f13a4c94ad15" x="31" y="4" width="118" height="14" bold="true">
+			<text><![CDATA[DETALLES DE COMPRA]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+	</pageHeader>
+	<detail>
+		<band height="48" splitType="Stretch">
+			<element kind="component" uuid="b6f15b64-856a-40a3-9ced-95f363d9ad4e" x="0" y="4" width="180" height="40">
+				<component kind="table">
+					<datasetRun uuid="c471369d-72f3-4249-b05a-2e94d33e4625" subDataset="dsPurchase_details">
+						<dataSourceExpression><![CDATA[$P{ds}]]></dataSourceExpression>
+					</datasetRun>
+					<column kind="single" uuid="c055e55e-0a97-4b25-90f0-10f3ddac6e04" width="70">
+						<columnHeader height="20" rowSpan="1" style="Table_CH">
+							<element kind="staticText" uuid="c1049190-ec47-4fc6-8d77-e377b923425a" x="0" y="0" width="70" height="20" fontSize="6.0" bold="true" hTextAlign="Left" vTextAlign="Middle">
+								<text><![CDATA[Producto]]></text>
+							</element>
+						</columnHeader>
+						<detailCell height="20" style="Table_TD">
+							<element kind="textField" uuid="1ea1f025-1c04-4adf-831f-30c06d611bd1" x="0" y="0" width="70" height="20" fontSize="6.0" hTextAlign="Left" vTextAlign="Middle">
+								<expression><![CDATA[$F{product_name}]]></expression>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+					</column>
+					<column kind="single" uuid="261d444e-df67-4128-8a28-8898534cc98f" width="40">
+						<columnHeader height="20" rowSpan="1" style="Table_CH">
+							<element kind="staticText" uuid="95fafb90-37ef-41be-a6b4-3810f38c3242" x="0" y="0" width="40" height="20" fontSize="6.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[Precio]]></text>
+							</element>
+						</columnHeader>
+						<detailCell height="20" style="Table_TD">
+							<element kind="textField" uuid="7d3ca6fa-f50e-4b88-8088-145f35f2364d" x="0" y="0" width="40" height="20" fontSize="6.0" hTextAlign="Center" vTextAlign="Middle">
+								<expression><![CDATA[String.format("%,.2f", $F{purchase_price})]]></expression>
+							</element>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+					</column>
+					<column kind="single" uuid="fc20e416-2122-4c15-b44b-619a67461e15" width="30">
+						<columnHeader height="20" rowSpan="1" style="Table_CH">
+							<element kind="staticText" uuid="1b221e68-638f-47b3-b7be-c122d4171820" x="0" y="0" width="30" height="20" fontSize="6.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[Cantidad]]></text>
+							</element>
+						</columnHeader>
+						<detailCell height="20" style="Table_TD">
+							<element kind="textField" uuid="cd63d2c2-373e-41bf-8e2e-53bc8614cff6" x="0" y="0" width="30" height="20" fontSize="6.0" hTextAlign="Center" vTextAlign="Middle">
+								<expression><![CDATA[$F{purchase_amount}]]></expression>
+							</element>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+					</column>
+					<column kind="single" uuid="d074ab34-6889-43db-8314-d3ab23c246aa" width="40">
+						<columnHeader height="20" rowSpan="1" style="Table_CH">
+							<element kind="staticText" uuid="7ea83fba-f323-4d47-aca7-c29f6621bdee" x="0" y="0" width="40" height="20" fontSize="6.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[Subtotal]]></text>
+							</element>
+						</columnHeader>
+						<detailCell height="20" style="Table_TD">
+							<element kind="textField" uuid="703596ec-0a32-47aa-a541-14264665bb01" x="0" y="0" width="40" height="20" fontSize="6.0" hTextAlign="Center" vTextAlign="Middle">
+								<expression><![CDATA[String.format("%,.2f", $F{purchase_subtotal})]]></expression>
+							</element>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+					</column>
+				</component>
+				<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+				<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+				<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+			</element>
+		</band>
+	</detail>
+	<summary height="98" splitType="Stretch">
+		<element kind="staticText" uuid="890ef4fe-3a0b-4708-9471-afa1188547a7" x="0" y="34" width="43" height="11" fontSize="8.0" bold="true">
+			<text><![CDATA[Proveedor: ]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+		</element>
+		<element kind="staticText" uuid="992d1e9e-e6aa-49cd-b56b-b1d0f7fcae74" x="0" y="47" width="46" height="11" fontSize="8.0" bold="true">
+			<text><![CDATA[Comprador:]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+		</element>
+		<element kind="textField" uuid="937d44f4-cf8e-4d2b-be42-e18d8d18cfcf" x="47" y="47" width="97" height="11" fontSize="8.0" vTextAlign="Middle">
+			<expression><![CDATA[$P{purcharser}]]></expression>
+			<patternExpression><![CDATA[$P{purcharser}]]></patternExpression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="staticText" uuid="31ee0945-eef4-4547-ac24-39efa92a4fd0" x="0" y="70" width="53" height="11" fontSize="8.0" bold="true">
+			<text><![CDATA[Total a pagar:]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+		</element>
+		<element kind="textField" uuid="dd6f0c1c-a2aa-45da-b240-874fd283aa6a" x="53" y="70" width="127" height="11" fontSize="8.0" vTextAlign="Top">
+			<expression><![CDATA["RD$" + String.format("%,.2f", $P{total})]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+		</element>
+		<element kind="textField" uuid="ac6a9bea-800a-4c09-b92c-13bd98326557" x="70" y="21" width="100" height="11" fontSize="8.0" vTextAlign="Bottom">
+			<expression><![CDATA[$P{created}]]></expression>
+			<patternExpression><![CDATA[$P{created}]]></patternExpression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="staticText" uuid="aa2dbfd3-4d14-4b18-9e11-0aceb1bffeed" x="0" y="21" width="69" height="11" fontSize="8.0" bold="true">
+			<text><![CDATA[Fecha de compra:]]></text>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+		</element>
+		<element kind="textField" uuid="8e2ec00e-7fd5-4638-9b70-2e80f97aafbe" x="44" y="34" width="100" height="11" fontSize="8.0">
+			<expression><![CDATA[$P{supplier}]]></expression>
+			<patternExpression><![CDATA[$P{supplier}]]></patternExpression>
+		</element>
+	</summary>
+</jasperReport>
