@@ -1,8 +1,21 @@
-Usuario administrador: cmanzanillo
-Contraseña: root
+# PVenta - Versión 1.0.1
 
-Ruta para iniciarlizar: PVenta -Version 1.0.1\dist\PVenta_-Version_1.0.1.jar
+Aplicación de punto de venta desarrollada en Java.
 
-REQUISITOS PARA INICIARLIZAR:
-Se requiere tener Java Instalado
-Recomentación: Tener el JDK 24 Instalado
+## Credenciales de acceso
+
+**Usuario administrador:**  
+`cmanzanillo`  
+
+**Contraseña:**  
+`root`
+
+## Instalación y ejecución
+
+### Requisitos previos
+- Tener Java instalado (versión recomendada: JDK 24)
+  
+### Pasos para iniciar la aplicación:
+1. Navega hasta la ruta:  
+   `PVenta -Version 1.0.1\dist\PVenta_-Version_1.0.1.jar`
+2. Ejecuta el archivo JAR
