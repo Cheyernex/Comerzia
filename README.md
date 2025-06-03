@@ -18,4 +18,4 @@ Aplicación de punto de venta desarrollada en Java.
 ### Pasos para iniciar la aplicación:
 1. Navega hasta la ruta:  
    `PVenta -Version 1.0.1\dist\PVenta_-Version_1.0.1.jar`
-2. Ejecuta el archivo JAR
+2. Doble clic o ejecuta via terminal
