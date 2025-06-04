@@ -76,33 +76,41 @@ public class ReportViewer extends javax.swing.JFrame {
             }
         });
         jScrollPane9.setViewportView(table_all_sales);
+        if (table_all_sales.getColumnModel().getColumnCount() > 0) {
+            table_all_sales.getColumnModel().getColumn(0).setResizable(false);
+            table_all_sales.getColumnModel().getColumn(1).setResizable(false);
+            table_all_sales.getColumnModel().getColumn(2).setResizable(false);
+            table_all_sales.getColumnModel().getColumn(3).setResizable(false);
+            table_all_sales.getColumnModel().getColumn(4).setResizable(false);
+        }
 
         jLabel_print_report.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel_print_report.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_print_report.setText("Imprimir");
+        jLabel_print_report.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/resources/images/impresora.png"))); // NOI18N
         jLabel_print_report.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(34, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 1022, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 1022, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel_print_report)
-                        .addGap(20, 20, 20)))
-                .addGap(32, 32, 32))
+                        .addGap(44, 44, 44))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(8, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel_print_report)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29))
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47))
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 1088, 490));
